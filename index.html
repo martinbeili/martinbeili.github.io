@@ -1,35 +1,191 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Work in Progress</title>
+        <title>Honig Landing Page</title>
         <script src="https://cdn.tailwindcss.com"></script>
     </head>
-    <body class="bg-gray-900 flex items-center justify-center min-h-screen">
-        <!-- Main Container -->
-        <div class="text-center space-y-6">
-            <!-- Icon -->
-            <div class="flex justify-center">
-                <div
-                    class="animate-spin h-16 w-16 border-4 border-blue-500 border-t-transparent rounded-full"
-                ></div>
+    <body class="bg-white scroll-smooth">
+        <!-- Navigation Bar -->
+        <nav class="sticky top-0 z-50 bg-white shadow-md">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between h-16">
+                    <!-- Logo -->
+                    <div class="flex items-center">
+                        <img src="logo.png" alt="Logo" class="h-8" />
+                        <span class="ml-2 text-lg font-bold text-yellow-700"
+                            >Natural Honey</span
+                        >
+                    </div>
+                    <!-- Desktop Menu -->
+                    <div
+                        class="hidden md:flex space-x-6 text-sm font-medium text-gray-700"
+                    >
+                        <a href="#about" class="hover:text-yellow-600"
+                            >Über mich</a
+                        >
+                        <a href="#sale" class="hover:text-yellow-600"
+                            >Verkauf</a
+                        >
+                        <a href="#apiary" class="hover:text-yellow-600"
+                            >Das Bienenhaus</a
+                        >
+                        <a href="#gallery" class="hover:text-yellow-600"
+                            >Galerie</a
+                        >
+                    </div>
+                    <!-- Icons -->
+                    <div class="hidden md:flex items-center space-x-4">
+                        <a
+                            href="#"
+                            class="text-yellow-700 hover:text-yellow-600"
+                            ><img src="flag-de.png" alt="DE" class="h-5"
+                        /></a>
+                        <a href="#" class="text-gray-700 hover:text-gray-500"
+                            ><i class="fab fa-facebook"></i
+                        ></a>
+                        <a href="#" class="text-gray-700 hover:text-gray-500"
+                            ><i class="fab fa-twitter"></i
+                        ></a>
+                    </div>
+                    <!-- Hamburger Menu Button -->
+                    <div class="md:hidden">
+                        <button
+                            id="mobile-menu-button"
+                            class="text-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-500"
+                        >
+                            <svg
+                                class="h-6 w-6"
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M4 6h16M4 12h16M4 18h16"
+                                />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
             </div>
+            <!-- Mobile Menu -->
+            <div
+                id="mobile-menu"
+                class="md:hidden hidden bg-white border-t border-gray-200"
+            >
+                <a
+                    href="#about"
+                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                    >Über mich</a
+                >
+                <a
+                    href="#sale"
+                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                    >Verkauf</a
+                >
+                <a
+                    href="#apiary"
+                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                    >Das Bienenhaus</a
+                >
+                <a
+                    href="#gallery"
+                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                    >Galerie</a
+                >
+            </div>
+        </nav>
 
-            <!-- Title -->
-            <h1 class="text-4xl font-bold text-white">
-                We're Working on Something Great!
-            </h1>
+        <!-- Hero Section -->
+        <section
+            id="hero"
+            class="relative bg-cover bg-center h-screen"
+            style="background-image: url('honeycomb.jpg')"
+        >
+            <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+            <div
+                class="relative z-10 flex flex-col justify-center items-center text-center h-full px-4"
+            >
+                <h1 class="text-white text-4xl sm:text-6xl font-extrabold mb-4">
+                    Natürlich süß, rein und lokal: <br />
+                    Ihr Honig aus der Region!
+                </h1>
+                <p class="text-white text-lg sm:text-xl font-medium mb-6">
+                    Entdecken Sie den Geschmack purer Natur mit unserem
+                    nachhaltig produzierten Honig. <br />
+                    Jedes Glas ist gefüllt mit der Liebe unserer Bienen zu ihrer
+                    Heimat.
+                </p>
+                <div class="flex space-x-4">
+                    <a
+                        href="#sale"
+                        class="bg-yellow-600 text-white px-6 py-3 rounded-lg shadow-lg text-lg hover:bg-yellow-700"
+                    >
+                        Zum Verkauf
+                    </a>
+                    <a
+                        href="#contact"
+                        class="bg-white text-yellow-600 px-6 py-3 rounded-lg shadow-lg text-lg hover:bg-yellow-100"
+                    >
+                        Kontakt
+                    </a>
+                </div>
+            </div>
+        </section>
 
-            <!-- Message -->
-            <p class="text-gray-400 text-lg">
-                This page is under construction. Please check back soon.
-            </p>
+        <!-- About Section -->
+        <section id="about" class="px-6 py-16 bg-gray-100">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-6">
+                    Über mich
+                </h2>
+                <p class="text-gray-700 text-lg">
+                    Unsere Imkerei hat eine Leidenschaft für nachhaltige
+                    Honigherstellung. Wir arbeiten eng mit unseren Bienen
+                    zusammen, um den besten regionalen Honig zu produzieren.
+                </p>
+            </div>
+        </section>
 
-            <!-- Footer -->
-            <footer class="text-sm text-gray-600 mt-4">
-                &copy; 2024 BeiliHung
-            </footer>
-        </div>
+        <!-- Sale Section -->
+        <section id="sale" class="px-6 py-16 bg-white">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-6">
+                    Verkauf
+                </h2>
+                <p class="text-gray-700 text-lg mb-8">
+                    Besuchen Sie unseren Online-Shop und entdecken Sie die
+                    Vielfalt unserer Honigsorten – perfekt für jede Gelegenheit.
+                </p>
+                <a
+                    href="#"
+                    class="bg-yellow-600 text-white px-6 py-3 rounded-lg text-lg hover:bg-yellow-700"
+                >
+                    Jetzt kaufen
+                </a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-gray-800 text-white px-6 py-6">
+            <div class="text-center">
+                <p>© 2024 Natural Honey. Alle Rechte vorbehalten.</p>
+            </div>
+        </footer>
+
+        <script>
+            // Mobile menu toggle
+            const menuButton = document.getElementById("mobile-menu-button");
+            const mobileMenu = document.getElementById("mobile-menu");
+
+            menuButton.addEventListener("click", () => {
+                mobileMenu.classList.toggle("hidden");
+            });
+        </script>
     </body>
 </html>
