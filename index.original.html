@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Honig Landing Page</title>
+        <link href="style.css" rel="stylesheet" />
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body class="bg-white scroll-smooth">
+        <!-- Navigation Bar -->
+        <nav class="sticky top-0 z-50 bg-white shadow-md">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between h-16">
+                    <div
+                        class="flex-1 flex items-center justify-center space-x-6"
+                    >
+                        <!-- Links header left -->
+                        <div
+                            class="hidden md:flex space-x-6 text-sm font-medium text-gray-700"
+                        >
+                            <a href="#about" class="hover:text-yellow-600"
+                                >Über mich</a
+                            >
+                            <a href="#sale" class="hover:text-yellow-600"
+                                >Verkauf</a
+                            >
+                        </div>
+                        <!-- Logo -->
+                        <div class="flex items-center">
+                            <img
+                                src="images/logo.png"
+                                alt="Logo"
+                                class="h-10 mx-4"
+                            />
+                        </div>
+                        <!-- Links header right -->
+                        <div
+                            class="hidden md:flex space-x-6 text-sm font-medium text-gray-700"
+                        >
+                            <a href="#apiary" class="hover:text-yellow-600"
+                                >Das Bienenhaus</a
+                            >
+                            <a href="#gallery" class="hover:text-yellow-600"
+                                >Galerie</a
+                            >
+                        </div>
+                    </div>
+                    <!-- Social icons right -->
+                    <div class="hidden md:flex items-center space-x-4">
+                        <a href="#" class="text-gray-700 hover:text-gray-500">
+                            <span class="[&>svg]:h-5 [&>svg]:w-5">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="currentColor"
+                                    viewBox="0 0 448 512"
+                                >
+                                    <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+                                    <path
+                                        d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"
+                                    />
+                                </svg>
+                            </span>
+                        </a>
+                        <a href="#" class="text-gray-700 hover:text-gray-500">
+                            <span class="[&>svg]:h-5 [&>svg]:w-5">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="currentColor"
+                                    viewBox="0 0 448 512"
+                                >
+                                    <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+                                    <path
+                                        d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+                                    />
+                                </svg>
+                            </span>
+                        </a>
+                        <a href="#" class="text-gray-700 hover:text-gray-500">
+                            <span class="[&>svg]:h-5 [&>svg]:w-5">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="currentColor"
+                                    viewBox="0 0 320 512"
+                                >
+                                    <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+                                    <path
+                                        d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"
+                                    />
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+                    <!-- Hamburger Menu Button -->
+                    <div class="md:hidden">
+                        <button
+                            id="mobile-menu-button"
+                            class="text-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-500"
+                        >
+                            <svg
+                                class="h-6 w-6"
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M4 6h16M4 12h16M4 18h16"
+                                />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <div
+                id="mobile-menu"
+                class="absolute left-0 top-16 w-full bg-white border-t border-gray-200 hidden z-40"
+            >
+                <div class="flex flex-col space-y-2 p-4">
+                    <a
+                        href="#about"
+                        class="block text-gray-700 text-lg hover:bg-gray-100 px-4 py-2 rounded"
+                        >Über mich</a
+                    >
+                    <a
+                        href="#sale"
+                        class="block text-gray-700 text-lg hover:bg-gray-100 px-4 py-2 rounded"
+                        >Verkauf</a
+                    >
+                    <a
+                        href="#apiary"
+                        class="block text-gray-700 text-lg hover:bg-gray-100 px-4 py-2 rounded"
+                        >Das Bienenhaus</a
+                    >
+                    <a
+                        href="#gallery"
+                        class="block text-gray-700 text-lg hover:bg-gray-100 px-4 py-2 rounded"
+                        >Galerie</a
+                    >
+                    <a
+                        href="#"
+                        class="block text-gray-700 text-lg hover:bg-gray-100 px-4 py-2 rounded"
+                    >
+                        <span class="[&>svg]:h-5 [&>svg]:w-5">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="currentColor"
+                                viewBox="0 0 448 512"
+                            >
+                                <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+                                <path
+                                    d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"
+                                />
+                            </svg>
+                        </span>
+                    </a>
+                    <a
+                        href="#"
+                        class="block text-gray-700 text-lg hover:bg-gray-100 px-4 py-2 rounded"
+                    >
+                        <span class="[&>svg]:h-5 [&>svg]:w-5">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="currentColor"
+                                viewBox="0 0 448 512"
+                            >
+                                <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+                                <path
+                                    d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+                                />
+                            </svg>
+                        </span>
+                    </a>
+                    <a
+                        href="#"
+                        class="block text-gray-700 text-lg hover:bg-gray-100 px-4 py-2 rounded"
+                    >
+                        <span class="[&>svg]:h-5 [&>svg]:w-5">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="currentColor"
+                                viewBox="0 0 320 512"
+                            >
+                                <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+                                <path
+                                    d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"
+                                />
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section
+            id="hero"
+            class="relative bg-cover bg-center h-screen"
+            style="
+                background-image: linear-gradient(
+                        rgba(0, 0, 0, 0.3),
+                        rgba(0, 0, 0, 0.3)
+                    ),
+                    url('images/background-zip.jpg');
+            "
+        >
+            <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+            <div
+                class="relative z-10 flex flex-col justify-center items-center text-center h-full px-4"
+            >
+                <h1 class="text-white text-4xl sm:text-6xl font-extrabold mb-4">
+                    Natürlich süß, rein und lokal: <br />
+                    Ihr Honig aus der Region!
+                </h1>
+                <p class="text-white text-lg sm:text-xl font-medium mb-6">
+                    Entdecken Sie den Geschmack purer Natur mit unserem
+                    nachhaltig produzierten Honig. <br />
+                    Jedes Glas ist gefüllt mit der Liebe unserer Bienen zu ihrer
+                    Heimat.
+                </p>
+                <div class="flex space-x-4">
+                    <a
+                        href="#sale"
+                        class="bg-yellow-600 text-white px-6 py-3 rounded-lg shadow-lg text-lg hover:bg-yellow-700"
+                    >
+                        Zum Verkauf
+                    </a>
+                    <a
+                        href="#contact"
+                        class="bg-white text-yellow-600 px-6 py-3 rounded-lg shadow-lg text-lg hover:bg-yellow-100"
+                    >
+                        Kontakt
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="px-6 py-16 bg-gray-100">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-6">
+                    Über mich
+                </h2>
+                <p class="text-gray-700 text-lg">
+                    Unsere Imkerei hat eine Leidenschaft für nachhaltige
+                    Honigherstellung. Wir arbeiten eng mit unseren Bienen
+                    zusammen, um den besten regionalen Honig zu produzieren.
+                </p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-gray-800 text-white px-6 py-8">
+            <div
+                class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8"
+            >
+                <!-- Contact Information -->
+                <div>
+                    <h3 class="text-lg font-bold mb-2">Kontakt</h3>
+                    <p class="text-sm">
+                        Natural Honey HQ<br />
+                        Bienenstraße 24<br />
+                        12345 Honigstadt<br />
+                        Deutschland
+                    </p>
+                    <p class="text-sm mt-2">Telefon: +49 123 456 789</p>
+                    <p class="text-sm">Email: info@naturalhoney.de</p>
+                </div>
+
+                <!-- Navigation Links -->
+                <div>
+                    <h3 class="text-lg font-bold mb-2">Links</h3>
+                    <ul class="space-y-1">
+                        <li>
+                            <a href="#about" class="hover:text-yellow-500"
+                                >Über mich</a
+                            >
+                        </li>
+                        <li>
+                            <a href="#sale" class="hover:text-yellow-500"
+                                >Verkauf</a
+                            >
+                        </li>
+                        <li>
+                            <a href="#apiary" class="hover:text-yellow-500"
+                                >Das Bienenhaus</a
+                            >
+                        </li>
+                        <li>
+                            <a href="#gallery" class="hover:text-yellow-500"
+                                >Galerie</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Language Selector -->
+                <div>
+                    <h3 class="text-lg font-bold mb-2">Sprache</h3>
+                    <select
+                        class="bg-gray-700 text-white rounded p-2 text-sm w-full"
+                        aria-label="Sprache auswählen"
+                    >
+                        <option value="de">Deutsch</option>
+                        <option value="en">English</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Bottom Footer -->
+            <div class="border-t border-gray-600 mt-8 pt-4 text-center text-sm">
+                <p>© 2024 Natural Honey. Alle Rechte vorbehalten.</p>
+            </div>
+        </footer>
+
+        <script>
+            // Mobile menu toggle
+            const menuButton = document.getElementById("mobile-menu-button");
+            const mobileMenu = document.getElementById("mobile-menu");
+
+            menuButton.addEventListener("click", () => {
+                mobileMenu.classList.toggle("hidden");
+            });
+        </script>
+    </body>
+</html>
