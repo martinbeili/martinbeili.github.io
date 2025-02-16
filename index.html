@@ -14,7 +14,7 @@
     </head>
     <body class="bg-white scroll-smooth">
         <!-- Navigation Bar -->
-        <nav class="sticky top-0 z-50 bg-amber-300 shadow-md">
+        <nav class="top-0 z-50 bg-amber-400 shadow-md">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex justify-between items-center h-16">
                     <!-- Logo Left -->
@@ -27,19 +27,25 @@
                     </div>
 
                     <!-- Center Menu -->
-                    <div
-                        class="hidden md:flex space-x-6 text-sm font-medium text-black-700"
-                    >
-                        <a href="#about" class="hover:text-yellow-500"
+                    <div class="hidden md:flex space-x-6 text-sm font-semibold">
+                        <a
+                            href="#about"
+                            class="hover:bg-amber-100 hover:text-black px-3 py-2 rounded-md"
                             >Über mich</a
                         >
-                        <a href="#sale" class="hover:text-yellow-500"
+                        <a
+                            href="#sale"
+                            class="hover:bg-amber-100 hover:text-black px-3 py-2 rounded-md"
                             >Verkauf</a
                         >
-                        <a href="#apiary" class="hover:text-yellow-500"
+                        <a
+                            href="#apiary"
+                            class="hover:bg-amber-100 hover:text-black px-3 py-2 rounded-md"
                             >Das Bienenhaus</a
                         >
-                        <a href="#gallery" class="hover:text-yellow-500"
+                        <a
+                            href="#gallery"
+                            class="hover:bg-amber-100 hover:text-black px-3 py-2 rounded-md"
                             >Galerie</a
                         >
                     </div>
@@ -123,9 +129,9 @@
             <!-- Mobile Menu -->
             <div
                 id="mobile-menu"
-                class="absolute left-0 top-16 w-full bg-amber-300 border-t border-amber-400 hidden z-40"
+                class="absolute left-0 top-16 w-full bg-amber-400 border-t border-amber-400 hidden z-40"
             >
-                <div class="flex flex-col space-y-2 p-4">
+                <div class="flex flex-col space-y-2 p-4 font-semibold">
                     <a
                         href="#about"
                         class="block text-black text-lg hover:bg-gray-100 px-4 py-2 rounded"
@@ -206,8 +212,8 @@
             class="relative bg-cover bg-center h-screen"
             style="
                 background-image: linear-gradient(
-                        rgba(0, 0, 0, 0.15),
-                        rgba(234, 179, 8, 0.25)
+                        rgba(0, 0, 0, 0.35),
+                        rgba(133, 101, 5, 0.25)
                     ),
                     url('images/background-zip.jpg');
             "
@@ -265,7 +271,7 @@
                         class="relative inline-flex group items-center justify-center px-8 py-4 text-lg font-bold text-gray-800 hover:text-gray-900 transition-all duration-300 bg-white rounded-full hover:shadow-xl hover:-translate-y-1"
                     >
                         <span
-                            class="absolute inset-0 w-full h-full rounded-full opacity-0 group-hover:opacity-20 transition-opacity duration-300 bg-gradient-to-r from-amber-400 to-amber-600"
+                            class="absolute inset-0 w-full h-full rounded-full opacity-0 transition-opacity duration-300"
                         ></span>
                         Kontakt
                         <svg
@@ -302,7 +308,7 @@
                     Top.
                 </h1>
                 <p
-                    class="text-lg font-normal text-gray-700 lg:text-xl lg:w-4/5 lg:float-left"
+                    class="text-lg font-normal text-gray-600 lg:text-xl lg:w-4/5 lg:float-left"
                 >
                     Bienen sind faszinierende Wesen und unverzichtbar für das
                     Ökosystem unserer Natur. Sie bestäuben rund ein Drittel
@@ -335,7 +341,7 @@
                     Regional.
                 </h1>
                 <p
-                    class="text-lg font-normal text-gray-700 lg:text-xl lg:w-4/5 lg:float-right"
+                    class="text-lg font-normal text-gray-600 lg:text-xl lg:w-4/5 lg:float-right"
                 >
                     Unsere Produkte werden mit Liebe und Sorgfalt in unserer
                     Region hergestellt. Jeder Schritt des Produktionsprozesses
@@ -467,7 +473,7 @@
                     Happy.
                 </h1>
                 <p
-                    class="text-lg font-normal text-gray-700 lg:text-xl lg:w-4/5 lg:float-left"
+                    class="text-lg font-normal text-gray-600 lg:text-xl lg:w-4/5 lg:float-left"
                 >
                     Wir sind stolz darauf, unsere
                     <span class="text-amber-400 font-bold">Kunden</span> mit
@@ -570,10 +576,10 @@
                         class="text-transparent bg-clip-text bg-gradient-to-r to-amber-300 from-amber-400"
                         >Galerie.</span
                     >
-                    Photos. 🐝
+                    Photos.
                 </h1>
                 <p
-                    class="text-lg font-normal text-gray-700 lg:text-xl lg:w-4/5 lg:float-right"
+                    class="text-lg font-normal text-gray-600 lg:text-xl lg:w-4/5 lg:float-right"
                 >
                     Entdecke die Welt unserer
                     <span class="text-amber-400 font-bold"
@@ -639,7 +645,7 @@
                     <span
                         class="absolute inset-0 w-full h-full rounded-full opacity-0 group-hover:opacity-20 transition-opacity duration-300 bg-white"
                     ></span>
-                    Galerie sehen
+                    Galerie ansehen
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         class="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform duration-300"
