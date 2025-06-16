@@ -1,0 +1,387 @@
+---
+layout: layout.html
+---
+
+<!-- Hero Section -->
+<section class="pt-32 pb-20 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center mb-16">
+            <h1 class="text-5xl md:text-6xl font-classical text-honey mb-6">
+                Galerie
+            </h1>
+            <div class="w-32 h-px bg-honey mx-auto opacity-40 mb-8"></div>
+            <p class="text-xl text-honey/70 max-w-3xl mx-auto font-light">
+                Einblicke in unsere Imkerei und die Welt der Bienen
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Gallery Section -->
+<section class="py-20">
+    <div class="max-w-7xl mx-auto px-6">
+        <!-- Gallery Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+            <!-- Image 1 -->
+            <div class="gallery-item cursor-pointer">
+                <img
+                    src="/images/bild1.jpeg"
+                    alt="Bienenstock in der Natur"
+                    class="w-full h-80 object-cover rounded-2xl shadow-lg"
+                    onclick="openModal(this)"
+                />
+                <p class="text-center text-honey/80 mt-4 font-medium">
+                    Bienenstock in der Natur
+                </p>
+            </div>
+
+            <!-- Image 2 -->
+            <div class="gallery-item cursor-pointer">
+                <img
+                    src="/images/img5.jpg"
+                    alt="Honigwaben"
+                    class="w-full h-80 object-cover rounded-2xl shadow-lg"
+                    onclick="openModal(this)"
+                />
+                <p class="text-center text-honey/80 mt-4 font-medium">
+                    Frische Honigwaben
+                </p>
+            </div>
+
+            <!-- Image 3 -->
+            <div class="gallery-item cursor-pointer">
+                <img
+                    src="/images/bees.jpg"
+                    alt="Bienen bei der Arbeit"
+                    class="w-full h-80 object-cover rounded-2xl shadow-lg"
+                    onclick="openModal(this)"
+                />
+                <p class="text-center text-honey/80 mt-4 font-medium">
+                    Bienen bei der Arbeit
+                </p>
+            </div>
+
+            <!-- Image 4 -->
+            <div class="gallery-item cursor-pointer">
+                <img
+                    src="/images/background.jpg"
+                    alt="Imkerei Landschaft"
+                    class="w-full h-80 object-cover rounded-2xl shadow-lg"
+                    onclick="openModal(this)"
+                />
+                <p class="text-center text-honey/80 mt-4 font-medium">
+                    Unsere Imkerei-Landschaft
+                </p>
+            </div>
+
+            <!-- Image 5 -->
+            <div class="gallery-item cursor-pointer">
+                <img
+                    src="/images/gallery_preview_1.jpeg"
+                    alt="Honigproduktion"
+                    class="w-full h-80 object-cover rounded-2xl shadow-lg"
+                    onclick="openModal(this)"
+                />
+                <p class="text-center text-honey/80 mt-4 font-medium">
+                    Honigproduktion
+                </p>
+            </div>
+
+            <!-- Image 6 -->
+            <div class="gallery-item cursor-pointer">
+                <img
+                    src="/images/gallery_preview_2.jpeg"
+                    alt="Bienenvolk"
+                    class="w-full h-80 object-cover rounded-2xl shadow-lg"
+                    onclick="openModal(this)"
+                />
+                <p class="text-center text-honey/80 mt-4 font-medium">
+                    Unser Bienenvolk
+                </p>
+            </div>
+
+            <!-- Image 7 -->
+            <div class="gallery-item cursor-pointer">
+                <img
+                    src="/images/gallery_preview_3.jpeg"
+                    alt="Fertige Honigprodukte"
+                    class="w-full h-80 object-cover rounded-2xl shadow-lg"
+                    onclick="openModal(this)"
+                />
+                <p class="text-center text-honey/80 mt-4 font-medium">
+                    Fertige Honigprodukte
+                </p>
+            </div>
+
+            <!-- Image 8 -->
+            <div class="gallery-item cursor-pointer">
+                <img
+                    src="/images/martin.jpg"
+                    alt="Familie D'Aloia bei der Arbeit"
+                    class="w-full h-80 object-cover rounded-2xl shadow-lg"
+                    onclick="openModal(this)"
+                />
+                <p class="text-center text-honey/80 mt-4 font-medium">
+                    Familie D'Aloia bei der Arbeit
+                </p>
+            </div>
+
+            <!-- Image 9 -->
+            <div class="gallery-item cursor-pointer">
+                <img
+                    src="/images/honey_jar.png"
+                    alt="Blütenhonig"
+                    class="w-full h-80 object-contain bg-white/50 rounded-2xl shadow-lg p-8"
+                    onclick="openModal(this)"
+                />
+                <p class="text-center text-honey/80 mt-4 font-medium">
+                    Unser Blütenhonig
+                </p>
+            </div>
+        </div>
+
+        <!-- Process Section -->
+        <div class="bg-white/30 rounded-3xl p-12 md:p-16 mb-20">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl md:text-5xl font-serif text-honey mb-6">
+                    Von der Blüte zum Glas
+                </h2>
+                <p class="text-xl text-honey/80 max-w-3xl mx-auto">
+                    Begleiten Sie uns auf dem Weg unseres Honigs
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div
+                        class="w-24 h-24 bg-dark-honey rounded-full flex items-center justify-center mx-auto mb-6"
+                    >
+                        <i class="fas fa-seedling text-3xl text-cream"></i>
+                    </div>
+                    <h3 class="text-xl font-serif text-honey mb-4">Sammeln</h3>
+                    <p class="text-honey/80 text-sm">
+                        Unsere Bienen sammeln Nektar von den schönsten Blüten
+                        der Region.
+                    </p>
+                </div>
+
+                <div class="text-center">
+                    <div
+                        class="w-24 h-24 bg-dark-honey rounded-full flex items-center justify-center mx-auto mb-6"
+                    >
+                        <i class="fas fa-home text-3xl text-cream"></i>
+                    </div>
+                    <h3 class="text-xl font-serif text-honey mb-4">
+                        Verarbeiten
+                    </h3>
+                    <p class="text-honey/80 text-sm">
+                        Im Bienenstock wird der Nektar zu köstlichem Honig
+                        verarbeitet.
+                    </p>
+                </div>
+
+                <div class="text-center">
+                    <div
+                        class="w-24 h-24 bg-dark-honey rounded-full flex items-center justify-center mx-auto mb-6"
+                    >
+                        <i class="fas fa-hand-holding text-3xl text-cream"></i>
+                    </div>
+                    <h3 class="text-xl font-serif text-honey mb-4">Ernten</h3>
+                    <p class="text-honey/80 text-sm">
+                        Mit größter Sorgfalt ernten wir den reifen Honig aus den
+                        Waben.
+                    </p>
+                </div>
+
+                <div class="text-center">
+                    <div
+                        class="w-24 h-24 bg-dark-honey rounded-full flex items-center justify-center mx-auto mb-6"
+                    >
+                        <i class="fas fa-wine-bottle text-3xl text-cream"></i>
+                    </div>
+                    <h3 class="text-xl font-serif text-honey mb-4">Abfüllen</h3>
+                    <p class="text-honey/80 text-sm">
+                        Jedes Glas wird von Hand abgefüllt und liebevoll
+                        etikettiert.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="text-center">
+            <h2 class="text-3xl md:text-4xl font-serif text-honey mb-8">
+                Besuchen Sie uns
+            </h2>
+            <p class="text-xl text-honey/80 mb-8 max-w-2xl mx-auto">
+                Interessiert an einem Besuch unserer Imkerei? Kontaktieren Sie
+                uns für eine persönliche Führung.
+            </p>
+            <a
+                href="mailto:beilihung.info@gmail.com?subject=Imkerei Besuch&body=Hallo Familie D'Aloia,%0D%0A%0D%0AIch würde gerne Ihre Imkerei besuchen.%0D%0A%0D%0AMeine Kontaktdaten:%0D%0AName: %0D%0ATelefon: %0D%0A%0D%0AVielen Dank!"
+                class="inline-block bg-dark-honey text-cream px-8 py-4 rounded-full text-lg font-medium hover-subtle"
+            >
+                <i class="fas fa-calendar-alt mr-2"></i>
+                Besuch anfragen
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Modal -->
+<div id="imageModal" class="modal">
+    <span class="close">&times;</span>
+    <button class="modal-nav prev" id="prevBtn">&#10094;</button>
+    <button class="modal-nav next" id="nextBtn">&#10095;</button>
+    <img class="modal-content" id="modalImage" />
+    <div class="modal-counter" id="modalCounter"></div>
+</div>
+
+<script>
+    // Modal functionality with navigation and swipe
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImage");
+    const counterText = document.getElementById("modalCounter");
+    const span = document.getElementsByClassName("close")[0];
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
+
+    // Get all gallery images
+    const galleryImages = document.querySelectorAll(".gallery-item img");
+    let currentImageIndex = 0;
+
+    function openModal(img) {
+        // Find the index of the clicked image
+        currentImageIndex = Array.from(galleryImages).indexOf(img);
+        modal.style.display = "flex";
+        showImage(currentImageIndex);
+    }
+
+    function showImage(index) {
+        const img = galleryImages[index];
+        modalImg.src = img.src;
+        counterText.innerHTML = `${index + 1} / ${galleryImages.length}`;
+
+        // Update navigation button visibility
+        prevBtn.style.display = index > 0 ? "flex" : "none";
+        nextBtn.style.display =
+            index < galleryImages.length - 1 ? "flex" : "none";
+    }
+
+    function nextImage() {
+        if (currentImageIndex < galleryImages.length - 1) {
+            currentImageIndex++;
+            showImage(currentImageIndex);
+        }
+    }
+
+    function prevImage() {
+        if (currentImageIndex > 0) {
+            currentImageIndex--;
+            showImage(currentImageIndex);
+        }
+    }
+
+    // Event listeners
+    span.onclick = function () {
+        modal.style.display = "none";
+    };
+
+    nextBtn.onclick = nextImage;
+    prevBtn.onclick = prevImage;
+
+    modal.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    };
+
+    // Keyboard navigation
+    document.addEventListener("keydown", function (event) {
+        if (modal.style.display === "flex") {
+            switch (event.key) {
+                case "Escape":
+                    modal.style.display = "none";
+                    break;
+                case "ArrowLeft":
+                    prevImage();
+                    break;
+                case "ArrowRight":
+                    nextImage();
+                    break;
+            }
+        }
+    });
+
+    // Touch/swipe functionality
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    modalImg.addEventListener("touchstart", function (event) {
+        touchStartX = event.changedTouches[0].screenX;
+    });
+
+    modalImg.addEventListener("touchend", function (event) {
+        touchEndX = event.changedTouches[0].screenX;
+        handleSwipe();
+    });
+
+    function handleSwipe() {
+        const swipeThreshold = 50;
+        const swipeDistance = touchEndX - touchStartX;
+
+        if (Math.abs(swipeDistance) > swipeThreshold) {
+            if (swipeDistance > 0) {
+                // Swipe right - go to previous image
+                prevImage();
+            } else {
+                // Swipe left - go to next image
+                nextImage();
+            }
+        }
+    }
+
+    // Mouse drag functionality for desktop
+    let isDragging = false;
+    let dragStartX = 0;
+    let dragEndX = 0;
+
+    modalImg.addEventListener("mousedown", function (event) {
+        isDragging = true;
+        dragStartX = event.clientX;
+        modalImg.style.cursor = "grabbing";
+        event.preventDefault();
+    });
+
+    modalImg.addEventListener("mousemove", function (event) {
+        if (isDragging) {
+            dragEndX = event.clientX;
+        }
+    });
+
+    modalImg.addEventListener("mouseup", function (event) {
+        if (isDragging) {
+            const dragDistance = dragEndX - dragStartX;
+            const dragThreshold = 50;
+
+            if (Math.abs(dragDistance) > dragThreshold) {
+                if (dragDistance > 0) {
+                    prevImage();
+                } else {
+                    nextImage();
+                }
+            }
+
+            isDragging = false;
+            modalImg.style.cursor = "pointer";
+        }
+    });
+
+    modalImg.addEventListener("mouseleave", function () {
+        isDragging = false;
+        modalImg.style.cursor = "pointer";
+    });
+
+    // Set initial cursor style
+    modalImg.style.cursor = "pointer";
+</script>

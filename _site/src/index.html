@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Beilihung - Schweizer Honig</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500&family=Alex+Brush&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+            rel="stylesheet"
+        />
+        <style>
+            .font-serif {
+                font-family: "Playfair Display", serif;
+            }
+            .font-sans {
+                font-family: "Inter", sans-serif;
+            }
+            .font-classical {
+                font-family: "Alex Brush", cursive;
+            }
+            .bg-honey {
+                background: linear-gradient(
+                    135deg,
+                    #f7f3e9 0%,
+                    #f1e6d3 50%,
+                    #e8d5b7 100%
+                );
+            }
+            .text-honey {
+                color: #8b5a2b;
+            }
+            .border-honey {
+                border-color: #d4a574;
+            }
+            .bg-honey-light {
+                background-color: #f9f6f0;
+            }
+            .text-cream {
+                color: #f7f3e9;
+            }
+            .text-dark-honey {
+                color: #5d3a1a;
+            }
+            .bg-dark-honey {
+                background-color: #8b5a2b;
+            }
+            .hover-subtle {
+                transition: all 0.3s ease;
+            }
+            .hover-subtle:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 8px 20px rgba(139, 90, 43, 0.4);
+            }
+        </style>
+    </head>
+    <body class="bg-honey font-sans">
+        <!-- Navigation -->
+        <nav
+            class="fixed top-0 w-full bg-white/90 backdrop-blur-md shadow-sm z-50"
+        >
+            <div class="max-w-6xl mx-auto px-6 py-4">
+                <div class="flex justify-between items-center">
+                    <h1 class="text-2xl font-serif text-honey font-semibold">
+                        Beilihung
+                    </h1>
+                    <div class="hidden md:flex space-x-8">
+                        <a
+                            href="#home"
+                            class="text-honey/70 hover:text-honey transition-colors"
+                            >Home</a
+                        >
+                        <a
+                            href="#history"
+                            class="text-honey/70 hover:text-honey transition-colors"
+                            >Geschichte</a
+                        >
+                        <a
+                            href="#products"
+                            class="text-honey/70 hover:text-honey transition-colors"
+                            >Produkte</a
+                        >
+
+                        <a
+                            href="#gallery"
+                            class="text-honey/70 hover:text-honey transition-colors"
+                            >Galerie</a
+                        >
+                        <a
+                            href="about.html"
+                            class="text-honey/70 hover:text-honey transition-colors"
+                            >Über uns</a
+                        >
+                    </div>
+                    <button
+                        id="mobile-menu-button"
+                        class="md:hidden text-honey p-2 hover-subtle"
+                    >
+                        <i id="menu-icon" class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu Overlay -->
+        <div
+            id="mobile-menu-overlay"
+            class="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 opacity-0 invisible transition-all duration-300"
+        ></div>
+
+        <!-- Mobile Menu -->
+        <div
+            id="mobile-menu"
+            class="fixed inset-0 bg-white z-50 transform translate-x-full transition-transform duration-300"
+        >
+            <div class="p-6 h-full flex flex-col">
+                <div class="flex justify-between items-center mb-12">
+                    <h2 class="text-2xl font-serif text-honey font-semibold">
+                        Beilihung
+                    </h2>
+                    <button id="close-menu" class="text-honey p-2 hover-subtle">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+
+                <nav class="flex-1 flex flex-col justify-center space-y-8">
+                    <a
+                        href="#home"
+                        class="block text-2xl text-honey/80 hover:text-honey transition-colors py-4 text-center"
+                    >
+                        Home
+                    </a>
+                    <a
+                        href="#history"
+                        class="block text-2xl text-honey/80 hover:text-honey transition-colors py-4 text-center"
+                    >
+                        Geschichte
+                    </a>
+                    <a
+                        href="#products"
+                        class="block text-2xl text-honey/80 hover:text-honey transition-colors py-4 text-center"
+                    >
+                        Produkte
+                    </a>
+
+                    <a
+                        href="#gallery"
+                        class="block text-2xl text-honey/80 hover:text-honey transition-colors py-4 text-center"
+                    >
+                        Galerie
+                    </a>
+                    <a
+                        href="about.html"
+                        class="block text-2xl text-honey/80 hover:text-honey transition-colors py-4 text-center"
+                    >
+                        Über uns
+                    </a>
+                </nav>
+
+                <div class="mt-8 pt-8 border-t border-honey/20">
+                    <div class="text-center space-y-4">
+                        <p class="text-honey/60 text-sm">Kontakt</p>
+                        <a
+                            href="mailto:beilihung.info@gmail.com"
+                            class="block text-honey/80 hover:text-honey transition-colors"
+                        >
+                            beilihung.info@gmail.com
+                        </a>
+                        <div class="flex justify-center space-x-4 pt-4">
+                            <a
+                                href="#"
+                                class="w-10 h-10 border border-honey rounded-full flex items-center justify-center text-honey hover-subtle"
+                            >
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a
+                                href="#"
+                                class="w-10 h-10 border border-honey rounded-full flex items-center justify-center text-honey hover-subtle"
+                            >
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+<!-- Hero Section -->
+<section
+    id="home"
+    class="min-h-screen flex items-center justify-center px-6 pt-32 md:pt-40"
+>
+    <div class="max-w-4xl w-full text-center">
+        <div class="space-y-12">
+            <!-- Brand Name -->
+            <div class="space-y-4">
+                <h1
+                    class="text-7xl md:text-9xl font-classical text-honey tracking-normal"
+                    style="text-shadow: 2px 2px 4px rgba(139, 90, 43, 0.15)"
+                >
+                    Beilihung
+                </h1>
+                <div class="w-24 h-px bg-honey mx-auto opacity-60"></div>
+                <p
+                    class="text-xl md:text-2xl text-honey/80 font-light tracking-widest uppercase"
+                >
+                    Schweizer Honig
+                </p>
+            </div>
+
+            <!-- Welcome Message -->
+            <div class="space-y-6 max-w-2xl mx-auto">
+                <h2
+                    class="text-3xl md:text-4xl font-serif text-honey leading-relaxed"
+                >
+                    Willkommen bei Familie D'Aloia
+                </h2>
+                <p
+                    class="text-lg md:text-xl text-honey/70 leading-relaxed font-light"
+                >
+                    Entdecken Sie unseren authentischen Schweizer Honig,
+                    handwerklich produziert mit Liebe zur Natur in Merenschwand.
+                </p>
+            </div>
+
+            <!-- Hero Images -->
+            <div class="py-16">
+                <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <div class="group">
+                        <div
+                            class="overflow-hidden rounded-2xl shadow-lg border border-honey/20"
+                        >
+                            <img
+                                src="images/bild1.jpeg"
+                                alt="Schweizer Honig"
+                                class="w-full h-96 md:h-[500px] object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                            />
+                        </div>
+                    </div>
+                    <div class="group">
+                        <div
+                            class="overflow-hidden rounded-2xl shadow-lg border border-honey/20"
+                        >
+                            <img
+                                src="images/img5.jpg"
+                                alt="Bienen bei der Arbeit"
+                                class="w-full h-96 md:h-[500px] object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- History Section -->
+<section id="history" class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-serif text-honey mb-6">
+                Unsere Geschichte
+            </h2>
+            <div class="w-32 h-px bg-honey mx-auto opacity-40 mb-8"></div>
+            <p class="text-xl text-honey/70 max-w-3xl mx-auto font-light">
+                Die Geschichte unserer Bienen und unseres Bienenhauses
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <p class="text-lg text-honey/80 leading-relaxed">
+                    Seit Generationen pflegen wir die Tradition der Imkerei in
+                    der wunderschönen Region Merenschwand. Unser Bienenhaus ist
+                    mehr als nur ein Ort der Honigproduktion – es ist das Herz
+                    unserer Leidenschaft für die Natur.
+                </p>
+                <p class="text-lg text-honey/80 leading-relaxed">
+                    Jede Biene, jeder Stock und jeder Tropfen Honig erzählt eine
+                    Geschichte von Hingabe, Tradition und dem tiefen Respekt vor
+                    der Natur.
+                </p>
+                <div class="pt-6">
+                    <a
+                        href="history.html"
+                        class="inline-flex items-center px-8 py-4 border-2 border-honey text-honey hover-subtle rounded-full font-medium"
+                    >
+                        Mehr erfahren
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="group">
+                <div class="overflow-hidden rounded-2xl shadow-lg">
+                    <img
+                        src="images/bees.jpg"
+                        alt="Unser Bienenhaus"
+                        class="w-full h-96 object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Products Section -->
+<section id="products" class="py-20 bg-honey-light">
+    <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-serif text-honey mb-6">
+                Unsere Produkte
+            </h2>
+            <div class="w-32 h-px bg-honey mx-auto opacity-40 mb-8"></div>
+            <p class="text-xl text-honey/70 max-w-3xl mx-auto font-light">
+                Drei einzigartige Honigsorten aus unserer Region
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8 mb-12">
+            <!-- Product 1 -->
+            <div
+                class="bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-300"
+            >
+                <div class="overflow-hidden">
+                    <img
+                        src="images/honey_jar.png"
+                        alt="Blütenhonig"
+                        class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                </div>
+                <div class="p-6">
+                    <h3 class="text-2xl font-serif text-honey mb-3">
+                        Blütenhonig
+                    </h3>
+                    <p class="text-honey/70 leading-relaxed">
+                        Mild und aromatisch aus verschiedenen Wildblüten der
+                        Schweizer Wiesen.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div
+                class="bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-300"
+            >
+                <div class="overflow-hidden">
+                    <img
+                        src="images/honey_jar2.png"
+                        alt="Waldhonig"
+                        class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                </div>
+                <div class="p-6">
+                    <h3 class="text-2xl font-serif text-honey mb-3">
+                        Waldhonig
+                    </h3>
+                    <p class="text-honey/70 leading-relaxed">
+                        Kräftig und würzig aus den tiefen Wäldern der Schweizer
+                        Berge.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div
+                class="bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-300"
+            >
+                <div class="overflow-hidden">
+                    <img
+                        src="images/honey_jar3.png"
+                        alt="Alpenhonig"
+                        class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                </div>
+                <div class="p-6">
+                    <h3 class="text-2xl font-serif text-honey mb-3">
+                        Blütenhonig Creme
+                    </h3>
+                    <p class="text-honey/70 leading-relaxed">
+                        Mild und aromatisch aus verschiedenen Wildblüten der
+                        Schweizer Wiesen.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center">
+            <a
+                href="products.html"
+                class="inline-flex items-center px-8 py-4 bg-dark-honey text-white hover-subtle rounded-full font-medium shadow-lg"
+            >
+                Alle Produkte ansehen
+                <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Reviews Section -->
+<section id="reviews" class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-serif text-honey mb-6">
+                Was unsere Kunden sagen
+            </h2>
+            <div class="w-32 h-px bg-honey mx-auto opacity-40 mb-8"></div>
+            <p class="text-xl text-honey/70 max-w-3xl mx-auto font-light">
+                Erfahrungen und Bewertungen unserer zufriedenen Kunden
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8 mb-12">
+            <!-- Review 1 -->
+            <div class="bg-honey-light rounded-2xl p-8 shadow-lg">
+                <!-- <div class="flex mb-4">
+                            <i class="fas fa-star text-yellow-500"></i>
+                            <i class="fas fa-star text-yellow-500"></i>
+                            <i class="fas fa-star text-yellow-500"></i>
+                            <i class="fas fa-star text-yellow-500"></i>
+                            <i class="fas fa-star text-yellow-500"></i>
+                        </div> -->
+                <p class="text-honey/80 mb-6 italic">
+                    "Der beste Honig, den ich je probiert habe! Die Qualität ist
+                    außergewöhnlich."
+                </p>
+                <div class="text-honey font-medium">— Maria S.</div>
+            </div>
+
+            <!-- Review 2 -->
+            <div class="bg-honey-light rounded-2xl p-8 shadow-lg">
+                <!-- <div class="flex mb-4">
+                            <i class="fas fa-star text-yellow-500"></i>
+                            <i class="fas fa-star text-yellow-500"></i>
+                            <i class="fas fa-star text-yellow-500"></i>
+                            <i class="fas fa-star text-yellow-500"></i>
+                            <i class="fas fa-star text-yellow-500"></i>
+                        </div> -->
+                <p class="text-honey/80 mb-6 italic">
+                    "Authentischer Schweizer Honig mit unvergleichlichem
+                    Geschmack. Sehr empfehlenswert!"
+                </p>
+                <div class="text-honey font-medium">— Thomas K.</div>
+            </div>
+
+            <!-- Review 3 -->
+            <div class="bg-honey-light rounded-2xl p-8 shadow-lg">
+                <!-- <div class="flex mb-4">
+                            <i class="fas fa-star text-yellow-500"></i>
+                            <i class="fas fa-star text-yellow-500"></i>
+                            <i class="fas fa-star text-yellow-500"></i>
+                            <i class="fas fa-star text-yellow-500"></i>
+                            <i class="fas fa-star text-yellow-500"></i>
+                        </div> -->
+                <p class="text-honey/80 mb-6 italic">
+                    "Familie D'Aloia produziert mit so viel Liebe. Man schmeckt
+                    die Qualität in jedem Tropfen."
+                </p>
+                <div class="text-honey font-medium">— Anna M.</div>
+            </div>
+        </div>
+
+        <div class="text-center">
+            <a
+                href="reviews.html"
+                class="inline-flex items-center px-8 py-4 border-2 border-honey text-honey hover-subtle rounded-full font-medium"
+            >
+                Alle Bewertungen lesen
+                <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Gallery Preview Section -->
+<section id="gallery" class="py-20 bg-honey-light">
+    <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-serif text-honey mb-6">
+                Galerie
+            </h2>
+            <div class="w-32 h-px bg-honey mx-auto opacity-40 mb-8"></div>
+            <p class="text-xl text-honey/70 max-w-3xl mx-auto font-light">
+                Ein Blick hinter die Kulissen unserer Honigproduktion
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6 mb-12">
+            <div class="group overflow-hidden rounded-2xl shadow-lg">
+                <img
+                    src="images/gallery_preview_1.jpeg"
+                    alt="Bienenstöcke"
+                    class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+            </div>
+            <div class="group overflow-hidden rounded-2xl shadow-lg">
+                <img
+                    src="images/gallery_preview_2.jpeg"
+                    alt="Honigwaben"
+                    class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+            </div>
+            <div class="group overflow-hidden rounded-2xl shadow-lg">
+                <img
+                    src="images/gallery_preview_3.jpeg"
+                    alt="Honigproduktion"
+                    class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+            </div>
+        </div>
+
+        <div class="text-center">
+            <a
+                href="gallery.html"
+                class="inline-flex items-center px-8 py-4 bg-dark-honey text-white hover-subtle rounded-full font-medium shadow-lg"
+            >
+                Vollständige Galerie ansehen
+                <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+        <h2 class="text-4xl md:text-5xl font-serif text-honey mb-8">Kontakt</h2>
+        <div class="w-32 h-px bg-honey mx-auto opacity-40 mb-12"></div>
+
+        <div class="space-y-6">
+            <p class="text-honey/70 font-light text-lg">
+                <i class="fas fa-envelope mr-3"></i>
+                <a
+                    href="mailto:beilihung.info@gmail.com"
+                    class="hover:text-honey transition-colors duration-300"
+                    >beilihung.info@gmail.com</a
+                >
+            </p>
+            <div class="text-honey/70 font-light text-lg flex justify-center">
+                <div class="flex items-start">
+                    <i class="fas fa-map-marker-alt mr-3 mt-1"></i>
+                    <div>
+                        Familie D'Aloia<br />
+                        Rozenstrasse 3<br />
+                        5634 Merenschwand
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Social Links -->
+        <div class="flex justify-center space-x-6 pt-8">
+            <a
+                href="#"
+                class="w-12 h-12 border border-honey rounded-full flex items-center justify-center text-honey hover-subtle"
+            >
+                <i class="fab fa-facebook text-lg"></i>
+            </a>
+            <a
+                href="#"
+                class="w-12 h-12 border border-honey rounded-full flex items-center justify-center text-honey hover-subtle"
+            >
+                <i class="fab fa-instagram text-lg"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+
+        <!-- Footer -->
+        <footer class="py-12 bg-honey text-center">
+            <div class="max-w-4xl mx-auto px-6">
+                <div class="border-t border-honey/20 pt-8">
+                    <p class="text-honey/60 text-sm font-light">
+                        © 2025 Beilihung. Alle Rechte vorbehalten.
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Decorative Elements -->
+        <div
+            class="fixed top-10 left-10 w-2 h-2 bg-honey/20 rounded-full animate-pulse"
+        ></div>
+        <div
+            class="fixed top-20 right-20 w-1 h-1 bg-honey/30 rounded-full animate-pulse"
+            style="animation-delay: 1s"
+        ></div>
+        <div
+            class="fixed bottom-20 left-20 w-1.5 h-1.5 bg-honey/25 rounded-full animate-pulse"
+            style="animation-delay: 2s"
+        ></div>
+        <div
+            class="fixed bottom-10 right-10 w-2 h-2 bg-honey/20 rounded-full animate-pulse"
+            style="animation-delay: 3s"
+        ></div>
+
+        <!-- Smooth Scrolling Script -->
+        <script>
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+                anchor.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(
+                        this.getAttribute("href")
+                    );
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: "smooth",
+                            block: "start",
+                        });
+                    }
+                    // Close mobile menu if open
+                    closeMobileMenu();
+                });
+            });
+
+            // Mobile menu functionality
+            const mobileMenuButton =
+                document.getElementById("mobile-menu-button");
+            const mobileMenu = document.getElementById("mobile-menu");
+            const mobileMenuOverlay = document.getElementById(
+                "mobile-menu-overlay"
+            );
+            const closeMenuButton = document.getElementById("close-menu");
+            const menuIcon = document.getElementById("menu-icon");
+
+            function openMobileMenu() {
+                mobileMenu.classList.remove("translate-x-full");
+                mobileMenuOverlay.classList.remove("opacity-0", "invisible");
+                menuIcon.classList.remove("fa-bars");
+                menuIcon.classList.add("fa-times");
+                document.body.style.overflow = "hidden";
+            }
+
+            function closeMobileMenu() {
+                mobileMenu.classList.add("translate-x-full");
+                mobileMenuOverlay.classList.add("opacity-0", "invisible");
+                menuIcon.classList.remove("fa-times");
+                menuIcon.classList.add("fa-bars");
+                document.body.style.overflow = "";
+            }
+
+            mobileMenuButton.addEventListener("click", function () {
+                if (mobileMenu.classList.contains("translate-x-full")) {
+                    openMobileMenu();
+                } else {
+                    closeMobileMenu();
+                }
+            });
+
+            closeMenuButton.addEventListener("click", closeMobileMenu);
+            mobileMenuOverlay.addEventListener("click", closeMobileMenu);
+
+            // Close menu on escape key
+            document.addEventListener("keydown", function (e) {
+                if (e.key === "Escape") {
+                    closeMobileMenu();
+                }
+            });
+        </script>
+    </body>
+</html>
