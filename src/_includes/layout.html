@@ -53,22 +53,22 @@
                             >Home</a
                         >
                         <a
-                            href="/history/"
+                            href="/history.html"
                             class="text-honey/70 hover:text-honey transition-colors"
                             >Geschichte</a
                         >
                         <a
-                            href="/products/"
+                            href="/products.html"
                             class="text-honey/70 hover:text-honey transition-colors"
                             >Produkte</a
                         >
                         <a
-                            href="/gallery/"
+                            href="/gallery.html"
                             class="text-honey/70 hover:text-honey transition-colors"
                             >Galerie</a
                         >
                         <a
-                            href="/about/"
+                            href="/about.html"
                             class="text-honey/70 hover:text-honey transition-colors"
                             >Über uns</a
                         >
@@ -116,25 +116,25 @@
                         Home
                     </a>
                     <a
-                        href="/history/"
+                        href="/history.html"
                         class="block text-2xl text-honey/80 hover:text-honey transition-colors py-4 text-center"
                     >
                         Geschichte
                     </a>
                     <a
-                        href="/products/"
+                        href="/products.html"
                         class="block text-2xl text-honey/80 hover:text-honey transition-colors py-4 text-center"
                     >
                         Produkte
                     </a>
                     <a
-                        href="/gallery/"
+                        href="/gallery.html"
                         class="block text-2xl text-honey/80 hover:text-honey transition-colors py-4 text-center"
                     >
                         Galerie
                     </a>
                     <a
-                        href="/about/"
+                        href="/about.html"
                         class="block text-2xl text-honey/80 hover:text-honey transition-colors py-4 text-center"
                     >
                         Über uns
@@ -151,23 +151,24 @@
                             beilihung.info@gmail.com
                         </a>
                         <div class="flex justify-center space-x-4 pt-4">
-                            <a
+                            <!-- <a
                                 href="#"
                                 class="w-10 h-10 border border-honey rounded-full flex items-center justify-center text-honey hover-subtle"
                             >
                                 <i class="fab fa-facebook"></i>
-                            </a>
+                            </a> -->
                             <a
-                                href="#"
+                                href="https://www.instagram.com/beilihung"
+                                target="_blank"
                                 class="w-10 h-10 border border-honey rounded-full flex items-center justify-center text-honey hover-subtle"
                             >
                                 <i class="fab fa-instagram"></i>
                             </a>
                             <a
-                                href="#"
+                                href="tel:+41791963140"
                                 class="w-10 h-10 border border-honey rounded-full flex items-center justify-center text-honey hover-subtle"
                             >
-                                <i class="fab fa-whatsapp"></i>
+                                <i class="fas fa-phone"></i>
                             </a>
                         </div>
                     </div>
@@ -191,26 +192,27 @@
                         >
                             Schweizer Honig aus traditioneller Imkerei. Familie
                             D'Aloia produziert seit Jahren hochwertigen Honig in
-                            Merenschwand.
+                            Rossau (8932 Mettmenstetten).
                         </p>
                         <div class="flex space-x-4">
-                            <a
+                            <!-- <a
                                 href="#"
                                 class="w-10 h-10 border border-cream/30 rounded-full flex items-center justify-center hover-subtle"
                             >
                                 <i class="fab fa-facebook"></i>
-                            </a>
+                            </a> -->
                             <a
-                                href="#"
+                                href="https://www.instagram.com/beilihung"
+                                target="_blank"
                                 class="w-10 h-10 border border-cream/30 rounded-full flex items-center justify-center hover-subtle"
                             >
                                 <i class="fab fa-instagram"></i>
                             </a>
                             <a
-                                href="#"
+                                href="tel:+41791963140"
                                 class="w-10 h-10 border border-cream/30 rounded-full flex items-center justify-center hover-subtle"
                             >
-                                <i class="fab fa-whatsapp"></i>
+                                <i class="fas fa-phone"></i>
                             </a>
                         </div>
                     </div>
@@ -228,28 +230,28 @@
                             </li>
                             <li>
                                 <a
-                                    href="/history/"
+                                    href="/history.html"
                                     class="text-cream/80 hover:text-cream transition-colors font-light"
                                     >Geschichte</a
                                 >
                             </li>
                             <li>
                                 <a
-                                    href="/products/"
+                                    href="/products.html"
                                     class="text-cream/80 hover:text-cream transition-colors font-light"
                                     >Produkte</a
                                 >
                             </li>
                             <li>
                                 <a
-                                    href="/gallery/"
+                                    href="/gallery.html"
                                     class="text-cream/80 hover:text-cream transition-colors font-light"
                                     >Galerie</a
                                 >
                             </li>
                             <li>
                                 <a
-                                    href="/about/"
+                                    href="/about.html"
                                     class="text-cream/80 hover:text-cream transition-colors font-light"
                                     >Über uns</a
                                 >
@@ -281,7 +283,13 @@
                 >
                     <p class="font-light">
                         &copy; <span id="current-year"></span> Beilihung -
-                        Familie D'Aloia. Alle Rechte vorbehalten.
+                        Familie D'Aloia. Alle Rechte vorbehalten | Website
+                        erstellt von
+                        <a
+                            href="mailto:manuelpaccoia@gmail.com"
+                            class="hover:text-cream transition-colors underline"
+                            >Manuel Paccoia</a
+                        >
                     </p>
                 </div>
             </div>
@@ -309,10 +317,12 @@
             // Smooth scrolling for navigation links
             document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
                 anchor.addEventListener("click", function (e) {
+                    const href = this.getAttribute("href");
+                    // Skip if it's not a valid anchor link (like tel:, mailto:, etc.)
+                    if (!href.startsWith("#")) return;
+
                     e.preventDefault();
-                    const target = document.querySelector(
-                        this.getAttribute("href")
-                    );
+                    const target = document.querySelector(href);
                     if (target) {
                         target.scrollIntoView({
                             behavior: "smooth",

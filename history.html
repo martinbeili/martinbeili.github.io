@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Beilihung - Schweizer Honig</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500&family=Alex+Brush&family=Kaushan+Script&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./css/style.css" />
+        <link
+            rel="icon"
+            type="image/png"
+            href="./images/favicon/favicon-96x96.png"
+            sizes="96x96"
+        />
+        <link
+            rel="icon"
+            type="image/svg+xml"
+            href="./images/favicon/favicon.svg"
+        />
+        <link rel="shortcut icon" href="./images/favicon/favicon.ico" />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="./images/favicon/apple-touch-icon.png"
+        />
+    </head>
+    <body class="bg-honey font-sans">
+        <!-- Navigation -->
+        <nav
+            class="fixed top-0 w-full bg-white/90 backdrop-blur-md shadow-sm z-50"
+        >
+            <div class="max-w-6xl mx-auto px-6 py-4">
+                <div class="flex justify-between items-center">
+                    <a href="./index.html">
+                        <h1
+                            class="text-2xl font-serif text-honey font-semibold"
+                        >
+                            Beilihung
+                        </h1>
+                    </a>
+                    <div class="hidden md:flex space-x-8">
+                        <a
+                            href="./index.html"
+                            class="text-honey/70 hover:text-honey transition-colors"
+                            >Home</a
+                        >
+                        <a
+                            href="./history.html"
+                            class="text-honey/70 hover:text-honey transition-colors"
+                            >Geschichte</a
+                        >
+                        <a
+                            href="./products.html"
+                            class="text-honey/70 hover:text-honey transition-colors"
+                            >Produkte</a
+                        >
+                        <a
+                            href="./gallery.html"
+                            class="text-honey/70 hover:text-honey transition-colors"
+                            >Galerie</a
+                        >
+                        <a
+                            href="./about.html"
+                            class="text-honey/70 hover:text-honey transition-colors"
+                            >Über uns</a
+                        >
+                    </div>
+                    <button
+                        id="mobile-menu-button"
+                        class="md:hidden text-honey p-2 hover-subtle"
+                    >
+                        <i id="menu-icon" class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu Overlay -->
+        <div
+            id="mobile-menu-overlay"
+            class="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 opacity-0 invisible transition-all duration-300"
+        ></div>
+
+        <!-- Mobile Menu -->
+        <div
+            id="mobile-menu"
+            class="fixed inset-0 bg-white z-50 transform translate-x-full transition-transform duration-300"
+        >
+            <div class="p-6 h-full flex flex-col">
+                <div class="flex justify-between items-center mb-12">
+                    <a href="./index.html">
+                        <h2
+                            class="text-2xl font-serif text-honey font-semibold"
+                        >
+                            Beilihung
+                        </h2>
+                    </a>
+                    <button id="close-menu" class="text-honey p-2 hover-subtle">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+
+                <nav class="flex-1 flex flex-col justify-center space-y-8">
+                    <a
+                        href="./index.html"
+                        class="block text-2xl text-honey/80 hover:text-honey transition-colors py-4 text-center"
+                    >
+                        Home
+                    </a>
+                    <a
+                        href="./history.html"
+                        class="block text-2xl text-honey/80 hover:text-honey transition-colors py-4 text-center"
+                    >
+                        Geschichte
+                    </a>
+                    <a
+                        href="./products.html"
+                        class="block text-2xl text-honey/80 hover:text-honey transition-colors py-4 text-center"
+                    >
+                        Produkte
+                    </a>
+                    <a
+                        href="./gallery.html"
+                        class="block text-2xl text-honey/80 hover:text-honey transition-colors py-4 text-center"
+                    >
+                        Galerie
+                    </a>
+                    <a
+                        href="./about.html"
+                        class="block text-2xl text-honey/80 hover:text-honey transition-colors py-4 text-center"
+                    >
+                        Über uns
+                    </a>
+                </nav>
+
+                <div class="mt-8 pt-8 border-t border-honey/20">
+                    <div class="text-center space-y-4">
+                        <p class="text-honey/60 text-sm">Kontakt</p>
+                        <a
+                            href="mailto:beilihung.info@gmail.com"
+                            class="block text-honey/80 hover:text-honey transition-colors"
+                        >
+                            beilihung.info@gmail.com
+                        </a>
+                        <div class="flex justify-center space-x-4 pt-4">
+                            <!-- <a
+                                href="#"
+                                class="w-10 h-10 border border-honey rounded-full flex items-center justify-center text-honey hover-subtle"
+                            >
+                                <i class="fab fa-facebook"></i>
+                            </a> -->
+                            <a
+                                href="https://www.instagram.com/beilihung"
+                                target="_blank"
+                                class="w-10 h-10 border border-honey rounded-full flex items-center justify-center text-honey hover-subtle"
+                            >
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a
+                                href="tel:+41791963140"
+                                class="w-10 h-10 border border-honey rounded-full flex items-center justify-center text-honey hover-subtle"
+                            >
+                                <i class="fas fa-phone"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+<!-- Hero Section -->
+<section class="pt-32 pb-20 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center mb-16">
+            <h1 class="text-5xl md:text-6xl font-classical text-honey mb-6">
+                Geschichte
+            </h1>
+            <div class="w-32 h-px bg-honey mx-auto opacity-40 mb-8"></div>
+            <p class="text-xl text-honey/70 max-w-3xl mx-auto font-light">
+                Die faszinierende Welt der Bienen und die Tradition der Imkerei
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Main Content -->
+<section class="py-20">
+    <div class="max-w-6xl mx-auto px-6">
+        <!-- Bees History -->
+        <div class="grid md:grid-cols-5 gap-16 items-center mb-20">
+            <div class="order-2 md:order-1 md:col-span-2">
+                <h2 class="text-4xl md:text-5xl font-serif text-honey mb-8">
+                    Die Geschichte
+                </h2>
+                <div class="space-y-6 text-lg text-honey/80 leading-relaxed">
+                    <p>
+                        Auf dem Bild ist das Bienenhaus zu Beginn der
+                        2000er-Jahre zu sehen – mit meinem Grossvater, der
+                        aufmerksam den Bienenflug beobachtet.
+                    </p>
+                    <p>
+                        Für erfahrene Imker wie ihn war der Flug der Bienen weit
+                        mehr als ein schönes Naturschauspiel: Er verriet viel
+                        über den Zustand und das Wohlbefinden des Bienenvolks.
+                    </p>
+                    <p>
+                        Mit einem Blick wusste er, ob es seinen Bienen gut ging
+                        – eine Fähigkeit, die nur mit jahrelanger Erfahrung
+                        wächst.
+                    </p>
+                </div>
+            </div>
+            <div class="order-1 md:order-2 md:col-span-3">
+                <div class="relative group">
+                    <img
+                        src="./images/bienhause_original.jpeg"
+                        alt="Bienen bei der Arbeit"
+                        class="w-full h-96 md:h-[500px] object-cover object-right rounded-2xl shadow-2xl group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"
+                    ></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Our Beehouse Story -->
+        <div class="bg-honey-light rounded-3xl p-12 md:p-16 mb-20">
+            <div class="max-w-4xl mx-auto">
+                <h2
+                    class="text-4xl md:text-5xl font-serif text-honey mb-8 text-center"
+                >
+                    Unser Bienenhaus
+                </h2>
+                <div class="space-y-6 text-lg text-honey/80 leading-relaxed">
+                    <p>
+                        Das Bienenhaus wurde im Jahr 1902 erbaut und ist somit
+                        über 120 Jahre alt. Seit seiner Errichtung wurden in
+                        diesem Bienenhaus stets Bienen gehalten, was eine lange
+                        Tradition der Imkerei zeigt, die auch heute in der
+                        Familie weitergeführt wird.
+                    </p>
+                    <p>
+                        Seit ich das Bienenhaus übernommen habe, ist es mit
+                        Schweizerkästen ausgestattet. Diese stellen eine
+                        besondere Form von Bienenkästen dar, wie sie typisch für
+                        die Imkerei in Schweizer Bienenhäusern sind. Der grosse
+                        Vorteil des Schweizerkastens ist, dass man die Völker
+                        von hinten kontrollieren kann. Dadurch ist man vom
+                        Flugloch entfernt, und die Eingriffe verlaufen ruhiger.
+                        Da der Kasten in einem Bienenhaus steht, hat man
+                        ausserdem den Vorteil, dass man vor Witterungseinflüssen
+                        geschützt ist.
+                    </p>
+                    <p>
+                        Das Bienenhaus befindet sich in Rossau bei
+                        Mettmenstetten, in einer Umgebung mit vielen Obstbäumen,
+                        Wiesen und in der Nähe mehrerer Wälder. Diese natürliche
+                        Vielfalt bietet den Bienen eine reiche Nahrungsquelle
+                        und fördert ihre Gesundheit sowie Produktivität. Der
+                        Standort ist somit ideal für die Bienenhaltung und trägt
+                        dazu bei, dass die Bienen in einem gesunden und
+                        produktiven Umfeld leben können.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Beekeeping History -->
+        <div class="grid md:grid-cols-2 gap-16 items-center mb-20">
+            <div>
+                <div class="relative group">
+                    <img
+                        src="./images/bild2.jpeg"
+                        alt="Traditionelle Imkerei"
+                        class="w-full h-96 md:h-[500px] object-cover rounded-2xl shadow-2xl group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"
+                    ></div>
+                </div>
+            </div>
+            <div>
+                <h2 class="text-4xl md:text-5xl font-serif text-honey mb-8">
+                    Bienenkästen
+                </h2>
+                <div class="space-y-6 text-lg text-honey/80 leading-relaxed">
+                    <p>Die traditionellen Schweizerkästen im Bienenhaus</p>
+                    <p>
+                        Ein besonderes Merkmal dieses Kastens ist, dass man
+                        durch die Fenster beobachten kann, was die Bienen tun,
+                        und so einen direkten Eindruck von ihrem Verhalten
+                        erhält.
+                    </p>
+                    <p>
+                        Auf dem bild links sieht man, das weitere
+                        Schweizerkästen neben dem Bienenhaus aufgestellt wurden.
+                        Diese Erweiterung dient dazu zusätzlichen Bienenvölkern
+                        Platz zu bieten und die Imkerei zu vergrössern.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Honey Production Process -->
+        <div class="bg-white/50 rounded-3xl p-12 md:p-16 mb-20">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl md:text-5xl font-serif text-honey mb-6">
+                    Von der Blüte zum Glas
+                </h2>
+                <p class="text-xl text-honey/80 max-w-3xl mx-auto">
+                    Begleiten Sie uns auf dem Weg unseres Honigs
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div
+                        class="w-24 h-24 bg-dark-honey rounded-full flex items-center justify-center mx-auto mb-6"
+                    >
+                        <i class="fas fa-seedling text-3xl text-cream"></i>
+                    </div>
+                    <h3 class="text-xl font-serif text-honey mb-4">Sammeln</h3>
+                    <p class="text-honey/80 text-sm">
+                        Unsere Bienen sammeln Nektar von den schönsten Blüten
+                        der Region.
+                    </p>
+                </div>
+
+                <div class="text-center">
+                    <div
+                        class="w-24 h-24 bg-dark-honey rounded-full flex items-center justify-center mx-auto mb-6"
+                    >
+                        <i class="fas fa-home text-3xl text-cream"></i>
+                    </div>
+                    <h3 class="text-xl font-serif text-honey mb-4">
+                        Verarbeiten
+                    </h3>
+                    <p class="text-honey/80 text-sm">
+                        Im Bienenhaus wird der Nektar zu köstlichem Honig
+                        verarbeitet.
+                    </p>
+                </div>
+
+                <div class="text-center">
+                    <div
+                        class="w-24 h-24 bg-dark-honey rounded-full flex items-center justify-center mx-auto mb-6"
+                    >
+                        <i class="fas fa-hand-holding text-3xl text-cream"></i>
+                    </div>
+                    <h3 class="text-xl font-serif text-honey mb-4">Ernten</h3>
+                    <p class="text-honey/80 text-sm">
+                        Mit grösster Sorgfalt ernten wir den reifen Honig aus
+                        den Waben.
+                    </p>
+                </div>
+
+                <div class="text-center">
+                    <div
+                        class="w-24 h-24 bg-dark-honey rounded-full flex items-center justify-center mx-auto mb-6"
+                    >
+                        <i class="fas fa-wine-bottle text-3xl text-cream"></i>
+                    </div>
+                    <h3 class="text-xl font-serif text-honey mb-4">Abfüllen</h3>
+                    <p class="text-honey/80 text-sm">
+                        Jedes Glas wird von Hand abgefüllt und liebevoll
+                        etikettiert.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="text-center">
+            <h2 class="text-3xl md:text-4xl font-serif text-honey mb-8">
+                Entdecken Sie unsere Honigvielfalt
+            </h2>
+            <p class="text-xl text-honey/80 mb-8 max-w-2xl mx-auto">
+                Jeder unserer Honige erzählt seine eigene Geschichte - von der
+                Blüte bis zum Glas.
+            </p>
+            <a
+                href="/products/"
+                class="inline-block bg-dark-honey text-cream px-8 py-4 rounded-full text-lg font-medium hover-subtle"
+            >
+                Unsere Produkte entdecken
+            </a>
+        </div>
+    </div>
+</section>
+
+
+        <!-- Footer -->
+        <footer class="bg-dark-honey text-cream py-16">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="grid md:grid-cols-3 gap-12">
+                    <!-- Company Info -->
+                    <div>
+                        <h3 class="text-2xl font-serif mb-6 font-light">
+                            Beilihung
+                        </h3>
+                        <p
+                            class="text-cream/80 mb-6 leading-relaxed font-light"
+                        >
+                            Schweizer Honig aus traditioneller Imkerei. Familie
+                            D'Aloia produziert seit Jahren hochwertigen Honig in
+                            Rossau (8932 Mettmenstetten).
+                        </p>
+                        <div class="flex space-x-4">
+                            <!-- <a
+                                href="#"
+                                class="w-10 h-10 border border-cream/30 rounded-full flex items-center justify-center hover-subtle"
+                            >
+                                <i class="fab fa-facebook"></i>
+                            </a> -->
+                            <a
+                                href="https://www.instagram.com/beilihung"
+                                target="_blank"
+                                class="w-10 h-10 border border-cream/30 rounded-full flex items-center justify-center hover-subtle"
+                            >
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a
+                                href="tel:+41791963140"
+                                class="w-10 h-10 border border-cream/30 rounded-full flex items-center justify-center hover-subtle"
+                            >
+                                <i class="fas fa-phone"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Navigation -->
+                    <div>
+                        <h4 class="text-lg mb-6 font-light">Navigation</h4>
+                        <ul class="space-y-3">
+                            <li>
+                                <a
+                                    href="./index.html"
+                                    class="text-cream/80 hover:text-cream transition-colors font-light"
+                                    >Home</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="./history.html"
+                                    class="text-cream/80 hover:text-cream transition-colors font-light"
+                                    >Geschichte</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="./products.html"
+                                    class="text-cream/80 hover:text-cream transition-colors font-light"
+                                    >Produkte</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="./gallery.html"
+                                    class="text-cream/80 hover:text-cream transition-colors font-light"
+                                    >Galerie</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="./about.html"
+                                    class="text-cream/80 hover:text-cream transition-colors font-light"
+                                    >Über uns</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Contact -->
+                    <div>
+                        <h4 class="text-lg mb-6 font-light">Kontakt</h4>
+                        <div class="space-y-3 text-cream/80 font-light">
+                            <p class="font-normal text-cream">
+                                Familie D'Aloia
+                            </p>
+                            <p>Rozenstrasse 3</p>
+                            <p>5634 Merenschwand</p>
+                            <a
+                                href="mailto:beilihung.info@gmail.com"
+                                class="hover:text-cream transition-colors block mt-4"
+                            >
+                                beilihung.info@gmail.com
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="border-t border-cream/20 mt-12 pt-8 text-center text-cream/60"
+                >
+                    <p class="font-light">
+                        &copy; <span id="current-year"></span> Beilihung -
+                        Familie D'Aloia. Alle Rechte vorbehalten | Website
+                        erstellt von
+                        <a
+                            href="mailto:manuelpaccoia@gmail.com"
+                            class="hover:text-cream transition-colors underline"
+                            >Manuel Paccoia</a
+                        >
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Decorative Elements -->
+        <div
+            class="fixed top-10 left-10 w-2 h-2 bg-honey/20 rounded-full animate-pulse"
+        ></div>
+        <div
+            class="fixed top-20 right-20 w-1 h-1 bg-honey/30 rounded-full animate-pulse"
+            style="animation-delay: 1s"
+        ></div>
+        <div
+            class="fixed bottom-20 left-20 w-1.5 h-1.5 bg-honey/25 rounded-full animate-pulse"
+            style="animation-delay: 2s"
+        ></div>
+        <div
+            class="fixed bottom-10 right-10 w-2 h-2 bg-honey/20 rounded-full animate-pulse"
+            style="animation-delay: 3s"
+        ></div>
+
+        <!-- Smooth Scrolling Script -->
+        <script>
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+                anchor.addEventListener("click", function (e) {
+                    const href = this.getAttribute("href");
+                    // Skip if it's not a valid anchor link (like tel:, mailto:, etc.)
+                    if (!href.startsWith("#")) return;
+
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: "smooth",
+                            block: "start",
+                        });
+                    }
+                    // Close mobile menu if open
+                    closeMobileMenu();
+                });
+            });
+
+            // Mobile menu functionality
+            const mobileMenuButton =
+                document.getElementById("mobile-menu-button");
+            const mobileMenu = document.getElementById("mobile-menu");
+            const mobileMenuOverlay = document.getElementById(
+                "mobile-menu-overlay"
+            );
+            const closeMenuButton = document.getElementById("close-menu");
+            const menuIcon = document.getElementById("menu-icon");
+
+            function openMobileMenu() {
+                mobileMenu.classList.remove("translate-x-full");
+                mobileMenuOverlay.classList.remove("opacity-0", "invisible");
+                menuIcon.classList.remove("fa-bars");
+                menuIcon.classList.add("fa-times");
+                document.body.style.overflow = "hidden";
+            }
+
+            function closeMobileMenu() {
+                mobileMenu.classList.add("translate-x-full");
+                mobileMenuOverlay.classList.add("opacity-0", "invisible");
+                menuIcon.classList.remove("fa-times");
+                menuIcon.classList.add("fa-bars");
+                document.body.style.overflow = "";
+            }
+
+            mobileMenuButton.addEventListener("click", function () {
+                if (mobileMenu.classList.contains("translate-x-full")) {
+                    openMobileMenu();
+                } else {
+                    closeMobileMenu();
+                }
+            });
+
+            closeMenuButton.addEventListener("click", closeMobileMenu);
+            mobileMenuOverlay.addEventListener("click", closeMobileMenu);
+
+            // Close menu on escape key
+            document.addEventListener("keydown", function (e) {
+                if (e.key === "Escape") {
+                    closeMobileMenu();
+                }
+            });
+
+            // Set current year in footer
+            document.getElementById("current-year").textContent =
+                new Date().getFullYear();
+        </script>
+    </body>
+</html>

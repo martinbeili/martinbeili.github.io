@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Beilihung - Schweizer Honig</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500&family=Alex+Brush&family=Kaushan+Script&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./css/style.css" />
+        <link
+            rel="icon"
+            type="image/png"
+            href="./images/favicon/favicon-96x96.png"
+            sizes="96x96"
+        />
+        <link
+            rel="icon"
+            type="image/svg+xml"
+            href="./images/favicon/favicon.svg"
+        />
+        <link rel="shortcut icon" href="./images/favicon/favicon.ico" />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="./images/favicon/apple-touch-icon.png"
+        />
+    </head>
+    <body class="bg-honey font-sans">
+        <!-- Navigation -->
+        <nav
+            class="fixed top-0 w-full bg-white/90 backdrop-blur-md shadow-sm z-50"
+        >
+            <div class="max-w-6xl mx-auto px-6 py-4">
+                <div class="flex justify-between items-center">
+                    <a href="./index.html">
+                        <h1
+                            class="text-2xl font-serif text-honey font-semibold"
+                        >
+                            Beilihung
+                        </h1>
+                    </a>
+                    <div class="hidden md:flex space-x-8">
+                        <a
+                            href="./index.html"
+                            class="text-honey/70 hover:text-honey transition-colors"
+                            >Home</a
+                        >
+                        <a
+                            href="./history.html"
+                            class="text-honey/70 hover:text-honey transition-colors"
+                            >Geschichte</a
+                        >
+                        <a
+                            href="./products.html"
+                            class="text-honey/70 hover:text-honey transition-colors"
+                            >Produkte</a
+                        >
+                        <a
+                            href="./gallery.html"
+                            class="text-honey/70 hover:text-honey transition-colors"
+                            >Galerie</a
+                        >
+                        <a
+                            href="./about.html"
+                            class="text-honey/70 hover:text-honey transition-colors"
+                            >Über uns</a
+                        >
+                    </div>
+                    <button
+                        id="mobile-menu-button"
+                        class="md:hidden text-honey p-2 hover-subtle"
+                    >
+                        <i id="menu-icon" class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu Overlay -->
+        <div
+            id="mobile-menu-overlay"
+            class="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 opacity-0 invisible transition-all duration-300"
+        ></div>
+
+        <!-- Mobile Menu -->
+        <div
+            id="mobile-menu"
+            class="fixed inset-0 bg-white z-50 transform translate-x-full transition-transform duration-300"
+        >
+            <div class="p-6 h-full flex flex-col">
+                <div class="flex justify-between items-center mb-12">
+                    <a href="./index.html">
+                        <h2
+                            class="text-2xl font-serif text-honey font-semibold"
+                        >
+                            Beilihung
+                        </h2>
+                    </a>
+                    <button id="close-menu" class="text-honey p-2 hover-subtle">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+
+                <nav class="flex-1 flex flex-col justify-center space-y-8">
+                    <a
+                        href="./index.html"
+                        class="block text-2xl text-honey/80 hover:text-honey transition-colors py-4 text-center"
+                    >
+                        Home
+                    </a>
+                    <a
+                        href="./history.html"
+                        class="block text-2xl text-honey/80 hover:text-honey transition-colors py-4 text-center"
+                    >
+                        Geschichte
+                    </a>
+                    <a
+                        href="./products.html"
+                        class="block text-2xl text-honey/80 hover:text-honey transition-colors py-4 text-center"
+                    >
+                        Produkte
+                    </a>
+                    <a
+                        href="./gallery.html"
+                        class="block text-2xl text-honey/80 hover:text-honey transition-colors py-4 text-center"
+                    >
+                        Galerie
+                    </a>
+                    <a
+                        href="./about.html"
+                        class="block text-2xl text-honey/80 hover:text-honey transition-colors py-4 text-center"
+                    >
+                        Über uns
+                    </a>
+                </nav>
+
+                <div class="mt-8 pt-8 border-t border-honey/20">
+                    <div class="text-center space-y-4">
+                        <p class="text-honey/60 text-sm">Kontakt</p>
+                        <a
+                            href="mailto:beilihung.info@gmail.com"
+                            class="block text-honey/80 hover:text-honey transition-colors"
+                        >
+                            beilihung.info@gmail.com
+                        </a>
+                        <div class="flex justify-center space-x-4 pt-4">
+                            <!-- <a
+                                href="#"
+                                class="w-10 h-10 border border-honey rounded-full flex items-center justify-center text-honey hover-subtle"
+                            >
+                                <i class="fab fa-facebook"></i>
+                            </a> -->
+                            <a
+                                href="https://www.instagram.com/beilihung"
+                                target="_blank"
+                                class="w-10 h-10 border border-honey rounded-full flex items-center justify-center text-honey hover-subtle"
+                            >
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a
+                                href="tel:+41791963140"
+                                class="w-10 h-10 border border-honey rounded-full flex items-center justify-center text-honey hover-subtle"
+                            >
+                                <i class="fas fa-phone"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+<!-- Hero Section -->
+<section class="pt-32 pb-20 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center mb-16">
+            <h1 class="text-5xl md:text-6xl font-classical text-honey mb-6">
+                Über uns
+            </h1>
+            <div class="w-32 h-px bg-honey mx-auto opacity-40 mb-8"></div>
+            <p class="text-xl text-honey/70 max-w-3xl mx-auto font-light">
+                Lernen Sie die Familie D'Aloia kennen - die Menschen hinter
+                Beilihung
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="py-20 bg-honey-light">
+    <div class="max-w-6xl mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+            <!-- Producer Photo -->
+            <div class="order-2 md:order-1">
+                <div class="group">
+                    <div
+                        class="overflow-hidden rounded-2xl shadow-lg border border-honey/20"
+                    >
+                        <img
+                            src="./images/martin.jpg"
+                            alt="Familie D'Aloia - Imker"
+                            class="w-full h-96 md:h-[500px] object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                        />
+                    </div>
+                </div>
+            </div>
+
+            <!-- About Content -->
+            <div class="order-1 md:order-2 space-y-8">
+                <div>
+                    <h2 class="text-4xl md:text-5xl font-serif text-honey mb-6">
+                        Familie D'Aloia
+                    </h2>
+                    <div class="w-24 h-px bg-honey opacity-40 mb-8"></div>
+                </div>
+
+                <div class="space-y-6 text-lg text-honey/80 leading-relaxed">
+                    <p>
+                        Mein Name ist Martin, geboren im Jahr 1994, und ich bin
+                        stolzer Familienvater. Schon in meiner Kindheit kam ich
+                        mit der Imkerei in Berührung, da mein Grossvater ein
+                        begeisterter Imker war. Diese frühe Erfahrung prägte
+                        mich, aber erst nach meiner Weiterbildung zum Hauswart
+                        entdeckte ich die Imkerei wieder als ernsthaftes Hobby.
+                    </p>
+                    <p>
+                        Als ich den Imkergrundkurs im Jahr 2021 gestartet habe
+                        widme ich mich nun mit viel Leidenschaft der Imkerei,
+                        zusätzlich zu meiner Arbeit und Familienzeit. Zu Beginn
+                        pflegte ich drei Bienenvölker, doch schnell stellte sich
+                        heraus, dass dies nur der Anfang war. Heute besitze ich
+                        22 Bienenvölker und erlebe täglich die faszinierende
+                        Welt der Bienen.
+                    </p>
+                    <p>
+                        Die Imkerei ist für mich nicht nur ein Hobby, sondern
+                        eine wahre Leidenschaft, die mir viel Freude bereitet
+                        und mir die Möglichkeit gibt, Traditionen fortzuführen
+                        und gleichzeitig Neues zu lernen. Besonders fasziniert
+                        mich die Organisation eines Bienenvolks und wie perfekt
+                        die Bienen zusammenarbeiten.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Information Section -->
+<section class="py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-serif text-honey mb-6">
+                Kontakt & Standort
+            </h2>
+            <div class="w-32 h-px bg-honey mx-auto opacity-40 mb-8"></div>
+            <p class="text-xl text-honey/70 max-w-3xl mx-auto font-light">
+                Nehmen Sie Kontakt auf
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-12 mb-16">
+            <!-- Contact Details -->
+            <div class="space-y-8">
+                <div class="bg-honey-light rounded-2xl p-8 shadow-lg">
+                    <h3 class="text-2xl font-serif text-honey mb-6">
+                        Kontaktinformationen
+                    </h3>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <i class="fas fa-envelope text-honey mr-4 mt-1"></i>
+                            <div>
+                                <p class="text-honey/60 text-sm mb-1">E-Mail</p>
+                                <a
+                                    href="mailto:beilihung.info@gmail.com"
+                                    class="text-honey hover:text-dark-honey transition-colors font-medium"
+                                >
+                                    beilihung.info@gmail.com
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <i class="fas fa-phone text-honey mr-4 mt-1"></i>
+                            <div>
+                                <p class="text-honey/60 text-sm mb-1">
+                                    Telefon
+                                </p>
+                                <a
+                                    href="tel:+41791963140"
+                                    class="text-honey hover:text-dark-honey transition-colors font-medium"
+                                >
+                                    +41 79 196 31 40
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <i
+                                class="fas fa-map-marker-alt text-honey mr-4 mt-1"
+                            ></i>
+                            <div>
+                                <p class="text-honey/60 text-sm mb-1">
+                                    Adresse
+                                </p>
+                                <div class="text-honey font-medium">
+                                    Familie D'Aloia<br />
+                                    Rozenstrasse 3<br />
+                                    5634 Merenschwand<br />
+                                    Schweiz
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- <div class="flex items-start">
+                                    <i
+                                        class="fas fa-clock text-honey mr-4 mt-1"
+                                    ></i>
+                                    <div>
+                                        <p class="text-honey/60 text-sm mb-1">
+                                            Öffnungszeiten
+                                        </p>
+                                        <div class="text-honey font-medium">
+                                            Mo-Fr: 9:00 - 18:00<br />
+                                            Sa: 9:00 - 16:00<br />
+                                            So: Nach Vereinbarung
+                                        </div>
+                                    </div>
+                                </div> -->
+                    </div>
+                </div>
+
+                <!-- Social Media -->
+                <div class="bg-honey-light rounded-2xl p-8 shadow-lg">
+                    <h3 class="text-2xl font-serif text-honey mb-6">
+                        Folgen Sie uns
+                    </h3>
+                    <div class="flex space-x-4">
+                        <!-- <a
+                            href="#"
+                            class="w-12 h-12 border border-honey rounded-full flex items-center justify-center text-honey hover-subtle"
+                        >
+                            <i class="fab fa-facebook text-lg"></i>
+                        </a> -->
+                        <a
+                            href="https://www.instagram.com/beilihung"
+                            class="w-12 h-12 border border-honey rounded-full flex items-center justify-center text-honey hover-subtle"
+                        >
+                            <i class="fab fa-instagram text-lg"></i>
+                        </a>
+                        <a
+                            href="tel:+41791963140"
+                            class="w-12 h-12 border border-honey rounded-full flex items-center justify-center text-honey hover-subtle"
+                        >
+                            <i class="fas fa-phone text-lg"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Google Maps -->
+            <div class="space-y-8">
+                <div class="bg-honey-light rounded-2xl p-8 shadow-lg">
+                    <h3 class="text-2xl font-serif text-honey mb-6">
+                        Unser Standort
+                    </h3>
+                    <div class="rounded-xl overflow-hidden shadow-lg">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d86394.03676931398!2d8.315647850000001!3d47.244775299999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47906c8c0f8b8b8b%3A0x0!2s5634%20Merenschwand%2C%20Switzerland!5e0!3m2!1sen!2sus!4v1640000000000!5m2!1sen!2sus"
+                            width="100%"
+                            height="300"
+                            style="border: 0"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            class="rounded-xl"
+                        ></iframe>
+                    </div>
+                </div>
+
+                <!-- Visit Us -->
+                <!-- <div class="bg-honey-light rounded-2xl p-8 shadow-lg">
+                    <h3 class="text-2xl font-serif text-honey mb-4">
+                        Besuchen Sie uns
+                    </h3>
+                    <p class="text-honey/70 mb-6">
+                        Gerne zeigen wir Ihnen unsere Imkerei und erklären Ihnen
+                        den Prozess der Honigherstellung. Vereinbaren Sie einen
+                        Termin für eine persönliche Führung.
+                    </p>
+                    <a
+                        href="mailto:beilihung.info@gmail.com?subject=Besichtigungstermin"
+                        class="inline-flex items-center px-6 py-3 bg-dark-honey text-white hover-subtle rounded-full font-medium shadow-lg"
+                    >
+                        Termin vereinbaren
+                        <i class="fas fa-calendar-alt ml-2"></i>
+                    </a>
+                </div> -->
+            </div>
+        </div>
+
+        <!-- Pickup Locations -->
+        <div class="text-center mb-16">
+            <h3 class="text-3xl md:text-4xl font-serif text-honey mb-6">
+                Abholstellen
+            </h3>
+            <div class="w-24 h-px bg-honey mx-auto opacity-40 mb-8"></div>
+            <p class="text-lg text-honey/70 max-w-2xl mx-auto font-light">
+                Holen Sie unseren Honig bequem an unseren Verkaufsstellen ab
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-12">
+            <!-- Direct from Farm -->
+            <div class="bg-honey-light rounded-3xl p-8 md:p-12 shadow-lg">
+                <div class="text-center mb-8">
+                    <div
+                        class="w-20 h-20 bg-dark-honey rounded-full flex items-center justify-center mx-auto mb-6"
+                    >
+                        <i class="fas fa-home text-2xl text-cream"></i>
+                    </div>
+                    <h4 class="text-2xl font-serif text-honey mb-4">
+                        Direkt vom Imker
+                    </h4>
+                </div>
+                <div class="space-y-4 text-honey/80">
+                    <div class="flex items-start space-x-3">
+                        <i class="fas fa-map-marker-alt text-honey mt-1"></i>
+                        <div>
+                            <p class="font-medium text-honey">
+                                Familie D'Aloia
+                            </p>
+                            <p>Rozenstrasse 3</p>
+                            <p>5634 Merenschwand</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-3">
+                        <i class="fas fa-clock text-honey mt-1"></i>
+                        <p>Nach telefonischer Vereinbarung</p>
+                    </div>
+                    <div class="flex items-start space-x-3">
+                        <i class="fas fa-phone text-honey mt-1"></i>
+                        <a
+                            href="tel:+41791963140"
+                            class="hover:text-honey transition-colors"
+                        >
+                            +41 79 196 31 40
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Farmers Place -->
+            <div class="bg-honey-light rounded-3xl p-8 md:p-12 shadow-lg">
+                <div class="text-center mb-8">
+                    <div
+                        class="w-20 h-20 bg-dark-honey rounded-full flex items-center justify-center mx-auto mb-6"
+                    >
+                        <i class="fas fa-store text-2xl text-cream"></i>
+                    </div>
+                    <h4 class="text-2xl font-serif text-honey mb-4">
+                        Wöschhüsli-lädeli Selbstbedienung
+                    </h4>
+                </div>
+                <div class="space-y-4 text-honey/80">
+                    <div class="flex items-start space-x-3">
+                        <i class="fas fa-map-marker-alt text-honey mt-1"></i>
+                        <div>
+                            <p class="font-medium text-honey">Standort</p>
+                            <p>Hauptikonerstrasse 10, 8932 Mettmenstetten</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-3">
+                        <i class="fas fa-clock text-honey mt-1"></i>
+                        <p>365 Tage - 8:30 - 17:30 Uhr</p>
+                    </div>
+                    <div class="flex items-start space-x-3">
+                        <i class="fas fa-credit-card text-honey mt-1"></i>
+                        <p>Zahlung vor Ort (Bar oder Twint)</p>
+                    </div>
+                    <div class="bg-white/50 rounded-lg p-4 mt-6">
+                        <p class="text-sm text-honey/70">
+                            <i class="fas fa-info-circle mr-2"></i>
+                            Einfach vorbeikommen, Honig auswählen und vor Ort
+                            bezahlen.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+        <!-- Footer -->
+        <footer class="bg-dark-honey text-cream py-16">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="grid md:grid-cols-3 gap-12">
+                    <!-- Company Info -->
+                    <div>
+                        <h3 class="text-2xl font-serif mb-6 font-light">
+                            Beilihung
+                        </h3>
+                        <p
+                            class="text-cream/80 mb-6 leading-relaxed font-light"
+                        >
+                            Schweizer Honig aus traditioneller Imkerei. Familie
+                            D'Aloia produziert seit Jahren hochwertigen Honig in
+                            Rossau (8932 Mettmenstetten).
+                        </p>
+                        <div class="flex space-x-4">
+                            <!-- <a
+                                href="#"
+                                class="w-10 h-10 border border-cream/30 rounded-full flex items-center justify-center hover-subtle"
+                            >
+                                <i class="fab fa-facebook"></i>
+                            </a> -->
+                            <a
+                                href="https://www.instagram.com/beilihung"
+                                target="_blank"
+                                class="w-10 h-10 border border-cream/30 rounded-full flex items-center justify-center hover-subtle"
+                            >
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a
+                                href="tel:+41791963140"
+                                class="w-10 h-10 border border-cream/30 rounded-full flex items-center justify-center hover-subtle"
+                            >
+                                <i class="fas fa-phone"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Navigation -->
+                    <div>
+                        <h4 class="text-lg mb-6 font-light">Navigation</h4>
+                        <ul class="space-y-3">
+                            <li>
+                                <a
+                                    href="./index.html"
+                                    class="text-cream/80 hover:text-cream transition-colors font-light"
+                                    >Home</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="./history.html"
+                                    class="text-cream/80 hover:text-cream transition-colors font-light"
+                                    >Geschichte</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="./products.html"
+                                    class="text-cream/80 hover:text-cream transition-colors font-light"
+                                    >Produkte</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="./gallery.html"
+                                    class="text-cream/80 hover:text-cream transition-colors font-light"
+                                    >Galerie</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="./about.html"
+                                    class="text-cream/80 hover:text-cream transition-colors font-light"
+                                    >Über uns</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Contact -->
+                    <div>
+                        <h4 class="text-lg mb-6 font-light">Kontakt</h4>
+                        <div class="space-y-3 text-cream/80 font-light">
+                            <p class="font-normal text-cream">
+                                Familie D'Aloia
+                            </p>
+                            <p>Rozenstrasse 3</p>
+                            <p>5634 Merenschwand</p>
+                            <a
+                                href="mailto:beilihung.info@gmail.com"
+                                class="hover:text-cream transition-colors block mt-4"
+                            >
+                                beilihung.info@gmail.com
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="border-t border-cream/20 mt-12 pt-8 text-center text-cream/60"
+                >
+                    <p class="font-light">
+                        &copy; <span id="current-year"></span> Beilihung -
+                        Familie D'Aloia. Alle Rechte vorbehalten | Website
+                        erstellt von
+                        <a
+                            href="mailto:manuelpaccoia@gmail.com"
+                            class="hover:text-cream transition-colors underline"
+                            >Manuel Paccoia</a
+                        >
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Decorative Elements -->
+        <div
+            class="fixed top-10 left-10 w-2 h-2 bg-honey/20 rounded-full animate-pulse"
+        ></div>
+        <div
+            class="fixed top-20 right-20 w-1 h-1 bg-honey/30 rounded-full animate-pulse"
+            style="animation-delay: 1s"
+        ></div>
+        <div
+            class="fixed bottom-20 left-20 w-1.5 h-1.5 bg-honey/25 rounded-full animate-pulse"
+            style="animation-delay: 2s"
+        ></div>
+        <div
+            class="fixed bottom-10 right-10 w-2 h-2 bg-honey/20 rounded-full animate-pulse"
+            style="animation-delay: 3s"
+        ></div>
+
+        <!-- Smooth Scrolling Script -->
+        <script>
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+                anchor.addEventListener("click", function (e) {
+                    const href = this.getAttribute("href");
+                    // Skip if it's not a valid anchor link (like tel:, mailto:, etc.)
+                    if (!href.startsWith("#")) return;
+
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: "smooth",
+                            block: "start",
+                        });
+                    }
+                    // Close mobile menu if open
+                    closeMobileMenu();
+                });
+            });
+
+            // Mobile menu functionality
+            const mobileMenuButton =
+                document.getElementById("mobile-menu-button");
+            const mobileMenu = document.getElementById("mobile-menu");
+            const mobileMenuOverlay = document.getElementById(
+                "mobile-menu-overlay"
+            );
+            const closeMenuButton = document.getElementById("close-menu");
+            const menuIcon = document.getElementById("menu-icon");
+
+            function openMobileMenu() {
+                mobileMenu.classList.remove("translate-x-full");
+                mobileMenuOverlay.classList.remove("opacity-0", "invisible");
+                menuIcon.classList.remove("fa-bars");
+                menuIcon.classList.add("fa-times");
+                document.body.style.overflow = "hidden";
+            }
+
+            function closeMobileMenu() {
+                mobileMenu.classList.add("translate-x-full");
+                mobileMenuOverlay.classList.add("opacity-0", "invisible");
+                menuIcon.classList.remove("fa-times");
+                menuIcon.classList.add("fa-bars");
+                document.body.style.overflow = "";
+            }
+
+            mobileMenuButton.addEventListener("click", function () {
+                if (mobileMenu.classList.contains("translate-x-full")) {
+                    openMobileMenu();
+                } else {
+                    closeMobileMenu();
+                }
+            });
+
+            closeMenuButton.addEventListener("click", closeMobileMenu);
+            mobileMenuOverlay.addEventListener("click", closeMobileMenu);
+
+            // Close menu on escape key
+            document.addEventListener("keydown", function (e) {
+                if (e.key === "Escape") {
+                    closeMobileMenu();
+                }
+            });
+
+            // Set current year in footer
+            document.getElementById("current-year").textContent =
+                new Date().getFullYear();
+        </script>
+    </body>
+</html>

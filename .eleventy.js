@@ -2,5 +2,6 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.setInputDirectory("./src");
     eleventyConfig.addPassthroughCopy({ "src/images": "images" });
     eleventyConfig.addPassthroughCopy({ "src/css": "css" });
-    eleventyConfig.addPassthroughCopy({ "images/favicon": "/" });
+    eleventyConfig.addPassthroughCopy({ "src/content": "content" });
+    eleventyConfig.addPassthroughCopy({ "src/images/favicon": "/" });
 };
